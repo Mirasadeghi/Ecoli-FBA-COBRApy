@@ -40,7 +40,7 @@ The FVA bar plot shows how much each key reaction can vary while maintaining the
 Reactions like EX_h_e, EX_co2_e, and EX_for_e show a wider flux range, indicating flexibility and alternative routes for metabolite exchange.
 In contrast, EX_glc__D_e, EX_o2_e, and Biomass_Ecoli_core have nearly zero span, meaning they are tightly constrained and essential for growth.
 
-![FVA](results/image_1_FVA.png)
+![FVA](FBA_COBRApy_Galaxy_Starter/results/image_1_FVA.png)
 
 Interpretation:
 Essential pathways remain fixed under optimal growth, while exchange reactions involving by-products like formate, acetate, or hydrogen exhibit metabolic flexibility.
