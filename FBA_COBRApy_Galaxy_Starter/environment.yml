@@ -1,0 +1,10 @@
+name: fba-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - cobra>=0.24
+  - glpk
+  - ipykernel
+  - pandas
+  - matplotlib
