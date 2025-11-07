@@ -1,3 +1,5 @@
+This repository contains my implementation of Flux Balance Analysis (FBA) on the E. coli core model using COBRApy, including visualization and sampling analysis.
+
 🧬 Flux Balance Analysis of E. coli Core Model
 
 This project explores the core metabolic network of E. coli using COBRApy to perform Flux Balance Analysis (FBA), Flux Variability Analysis (FVA), and flux space sampling (ACHR).
@@ -53,6 +55,10 @@ The histogram displays the distribution of two important fluxes: Biomass_Ecoli_c
 Biomass fluxes are tightly centered around a single peak, showing stable growth behavior across all feasible states.
 In contrast, lactate fluxes have a broader spread, reflecting that lactate secretion can vary substantially while still sustaining growth.
 
+
+![FVA](FBA_COBRApy_Galaxy_Starter/results/image_4_Distribution.png)
+
+
 Interpretation:
 The model maintains a consistent growth rate, but the route of energy metabolism (fermentation vs. respiration) can change — a hallmark of E. coli’s metabolic adaptability.
 
@@ -63,25 +69,18 @@ The model maintains a consistent growth rate, but the route of energy metabolism
 This scatter plot compares EX_lac__D_e and Biomass_Ecoli_core.
 There is a weak negative trend: higher lactate secretion generally corresponds to slightly lower growth rates.
 
+![FVA](FBA_COBRApy_Galaxy_Starter/results/image_3_Pairplot.png)
+
 Interpretation:
 When oxygen availability is limited, E. coli shifts toward fermentation, producing lactate but achieving lower biomass yields — consistent with biological reality.
 
 
-
-4. Pairwise Flux Correlations
-
-The pairplot illustrates pairwise relationships between main exchange reactions (EX_glc__D_e, EX_o2_e, EX_ac_e, EX_lac__D_e) and the growth rate.
-Each diagonal shows the distribution of one flux, while the scatter plots show how pairs interact.
-
-Interpretation:
-Most flux pairs appear weakly correlated, but a slight negative correlation between lactate and oxygen fluxes suggests metabolic switching between aerobic and anaerobic states.
-
-
-
-5. Principal Component Analysis (PCA)
+4. Principal Component Analysis (PCA)
 
 The PCA scatter plot summarizes the 200 sampled flux states into two dimensions (PC1 and PC2).
 The broad spread of points along PC1 indicates high variability among feasible metabolic states, while PC2 captures smaller fluctuations.
+
+![FVA](FBA_COBRApy_Galaxy_Starter/results/image_2_PCA.png)
 
 Interpretation:
 The flux space of E. coli is high-dimensional but structured: even within feasible solutions, some directions (metabolic modes) dominate variability — showing the balance between flexibility and constraint in the network.
